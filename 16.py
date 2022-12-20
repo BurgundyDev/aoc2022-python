@@ -4,7 +4,9 @@ from collections import deque
 valves = {}
 tunnels = {}
 
-for line in open("16.txt"):
+print(get_input(16))
+
+for line in get_input(16).splitlines():
     line = line.strip()
     valve = line.split()[1]
     flow = int(line.split(";")[0].split("=")[1])
