@@ -58,22 +58,22 @@ for x in range(min_x, max_x):
             checked = (x, y, z)
             if checked not in cubes:
                 hits = 0
-                if (checked[0] - 1, checked[1], checked[2]) in cubes or (checked[0] - 2, checked[1], checked[2]) in cubes or (checked[0] - 3, checked[1], checked[2]) in cubes:
+                if (checked[0] - 1, checked[1], checked[2]) in cubes:
                     hits += 1
                 else: continue
-                if (checked[0] + 1, checked[1], checked[2]) in cubes or (checked[0] + 2, checked[1], checked[2]) in cubes or (checked[0] + 3, checked[1], checked[2]) in cubes:
+                if (checked[0] + 1, checked[1], checked[2]) in cubes:
                     hits += 1
                 else: continue
-                if (checked[0], checked[1] - 1, checked[2]) in cubes or (checked[0], checked[1] - 2, checked[2]) in cubes or (checked[0], checked[1] - 3, checked[2]) in cubes:
+                if (checked[0], checked[1] - 1, checked[2]) in cubes:
                     hits += 1
                 else: continue
-                if (checked[0], checked[1] + 1, checked[2]) in cubes or (checked[0], checked[1] + 2, checked[2]) in cubes or (checked[0], checked[1] + 3, checked[2]) in cubes:
+                if (checked[0], checked[1] + 1, checked[2]) in cubes:
                     hits += 1
                 else: continue
-                if (checked[0], checked[1], checked[2] - 1) in cubes or (checked[0], checked[1], checked[2] - 2) in cubes or (checked[0], checked[1], checked[2] - 3) in cubes:
+                if (checked[0], checked[1], checked[2] - 1) in cubes:
                     hits += 1
                 else: continue
-                if (checked[0], checked[1], checked[2] + 1) in cubes or (checked[0], checked[1], checked[2] - 2) in cubes or (checked[0], checked[1], checked[2] - 3) in cubes:
+                if (checked[0], checked[1], checked[2] + 1) in cubes:
                     hits += 1
                 else: continue
                 if hits == 6:
