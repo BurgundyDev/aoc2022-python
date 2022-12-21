@@ -75,11 +75,11 @@ while rockCount < T:
             rock = {x + 2 + (height + 3) * 1j for x in rocks[rockID]}
             key = (ji, rockID, summarize())
             if key in seen:
-                lrockCount, lastHeight = seen[key]
+                lastRockCount, lastHeight = seen[key]
                 rem = T - rockCount
-                rep = rem // (rockCount - lrockCount)
+                rep = rem // (rockCount - lastRockCount)
                 offset = rep * (height - lastHeight)
-                rockCount += rep * (rockCount - lrockCount)
+                rockCount += rep * (rockCount - lastRockCount)
                 seen = {}
             seen[key] = (rockCount, height)
         else:
